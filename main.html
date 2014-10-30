@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css" />
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/validator.js"></script>
+        <!--<script type="text/javascript" src="js/validator_settings.js"></script>-->
+        <title>SecondApp</title>
+    </head>
+    <body>
+        <div class='form_wrapper'>
+        <form id='app_form' role="form" data-toggle="validator" name='app_form' action='index.php' method='post' class='app'>
+            <div class="left-inner-addon form-group">
+                <i class='glyphicon glyphicon-user'></i>
+                <input type='text' pattern="^([а-яА-Я]+ [а-яА-Я]+)$" data-error='Обязательное поле. Только русские буквы!' required class="form-control" placeholder="Фамилия Имя" name='fio' />
+                <span class="help-block with-errors"></span>
+            </div>
+
+            <div class="left-inner-addon form-group">
+                <i class='glyphicon glyphicon-envelope'></i>
+                <input type='email' data-error='Обязательное поле. Введите email в правильном формате!' required  class="form-control" placeholder="Электронная почта" name='email' />
+                <span class="help-block with-errors"></span>
+            </div>
+
+            <div class="left-inner-addon form-group">
+                <i class='glyphicon glyphicon-heart-empty'></i>
+                <input type='number' min='1' data-error="Введите положительное целое число!" class="form-control" placeholder="Возраст" name='age' />
+                <span class="help-block with-errors"></span>
+            </div>
+
+            <div class='form-group'>
+                <select name='gender' class="form-control ">
+                    <option value='Мужской'>Мужской</option>
+                    <option value='Женский'>Женский</option>
+                </select>
+            </div>
+
+            <div class="checkbox form-group">
+                <label>
+                    <input type='checkbox' name='is_smoke'/> Я курю
+                </label>
+            </div>
+
+            <input type='submit' name='send' class='btn btn-success pull-right' value = 'Готово' />
+        </form>
+        </div>
+
